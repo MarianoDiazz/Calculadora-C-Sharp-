@@ -40,7 +40,6 @@
             btn9 = new Button();
             btn6 = new Button();
             btn3 = new Button();
-            btnPunto = new Button();
             btnMult = new Button();
             button20 = new Button();
             button22 = new Button();
@@ -218,19 +217,6 @@
             btn3.UseVisualStyleBackColor = false;
             btn3.Click += btn3_Click;
             // 
-            // btnPunto
-            // 
-            btnPunto.BackColor = SystemColors.WindowFrame;
-            btnPunto.FlatStyle = FlatStyle.Flat;
-            btnPunto.Font = new Font("Sitka Text", 14.2499981F);
-            btnPunto.ForeColor = SystemColors.Control;
-            btnPunto.Location = new Point(114, 265);
-            btnPunto.Name = "btnPunto";
-            btnPunto.Size = new Size(42, 45);
-            btnPunto.TabIndex = 14;
-            btnPunto.Text = ".";
-            btnPunto.UseVisualStyleBackColor = false;
-            // 
             // btnMult
             // 
             btnMult.BackColor = Color.DarkOrange;
@@ -251,7 +237,7 @@
             button20.FlatStyle = FlatStyle.Flat;
             button20.Font = new Font("Sitka Text", 14.2499981F);
             button20.ForeColor = SystemColors.Control;
-            button20.Location = new Point(114, 61);
+            button20.Location = new Point(114, 265);
             button20.Name = "button20";
             button20.Size = new Size(42, 45);
             button20.TabIndex = 22;
@@ -320,7 +306,7 @@
             btnSigno.ForeColor = SystemColors.Control;
             btnSigno.Location = new Point(63, 61);
             btnSigno.Name = "btnSigno";
-            btnSigno.Size = new Size(42, 45);
+            btnSigno.Size = new Size(93, 45);
             btnSigno.TabIndex = 26;
             btnSigno.Text = "+/-";
             btnSigno.UseVisualStyleBackColor = false;
@@ -341,7 +327,6 @@
             Controls.Add(btn9);
             Controls.Add(btn6);
             Controls.Add(btn3);
-            Controls.Add(btnPunto);
             Controls.Add(btnMult);
             Controls.Add(btn8);
             Controls.Add(btn5);
@@ -374,7 +359,6 @@
         private Button btn9;
         private Button btn6;
         private Button btn3;
-        private Button btnPunto;
         private Button btnMult;
         private Button button20;
         private Button button22;

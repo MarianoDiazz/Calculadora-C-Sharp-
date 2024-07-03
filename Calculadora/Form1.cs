@@ -1,5 +1,4 @@
-﻿
-namespace Calculadora
+﻿namespace Calculadora
 {
     public partial class Form1 : Form
     {
@@ -103,11 +102,13 @@ namespace Calculadora
             }
         }
 
-            private void btnDiv_Click(object sender, EventArgs e)
+        private void btnDiv_Click(object sender, EventArgs e)
         {
-            operador = "/";
-            primero = double.Parse(txtScreen.Text);
-            txtScreen.Clear();
+            if (double.TryParse(txtScreen.Text, out primero))
+            {
+                operador = "/";
+                txtScreen.Clear();
+            }
         }
 
         private void btnSigno_Click(object sender, EventArgs e)
@@ -121,25 +122,27 @@ namespace Calculadora
 
         private void button22_Click(object sender, EventArgs e)
         {
-            segundo = double.Parse(txtScreen.Text);
-            double resultado = 0;
-
-            switch (operador)
+            if (double.TryParse(txtScreen.Text, out segundo))
             {
-                case "+":
-                    resultado = obj.Sumar(primero, segundo);
-                    break;
-                case "-":
-                    resultado = obj2.Restar(primero, segundo);
-                    break;
-                case "*":
-                    resultado = obj3.Multiplicar(primero, segundo);
-                    break;
-                case "/":
-                    resultado = obj4.Dividir(primero, segundo);
-                    break;
+                double resultado = 0;
+
+                switch (operador)
+                {
+                    case "+":
+                        resultado = obj.Sumar(primero, segundo);
+                        break;
+                    case "-":
+                        resultado = obj2.Restar(primero, segundo);
+                        break;
+                    case "*":
+                        resultado = obj3.Multiplicar(primero, segundo);
+                        break;
+                    case "/":
+                        resultado = obj4.Dividir(primero, segundo);
+                        break;
+                }
+                txtScreen.Text = resultado.ToString();
             }
-            txtScreen.Text = resultado.ToString();
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
@@ -154,5 +157,6 @@ namespace Calculadora
             else
                 txtScreen.Text = txtScreen.Text.Substring(0, txtScreen.Text.Length - 1);
         }
+
     }
 }
